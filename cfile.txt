@@ -1,0 +1,60 @@
+#include"week5_call.h"
+#include<iostream>
+using namespace std;
+
+int inc(int counter);
+int add(int a, int b=0);
+int addsub(int a, int b, int *sum, int *diff);
+int addsubref(int a, int b, int &sum, int &diff);
+int callInc(){
+    int i=10;
+    cout i="<<i<<endl;
+    inc(i);
+    cout<<" i="<<i<<endl;
+    return 0;
+}
+
+int inc(int counter){
+    counter++;
+    return counter;
+}
+
+int callAdd(){
+    int i=1,j=2,k;
+    k=add(i,j);
+    cout<<"k= "<<k<<endl;
+    return 0;
+}
+
+int add(int a, int b){
+    a=a+b;
+    return a;
+}
+
+int callAddSub(){
+    int i=1,j=2,k,l;
+    addsub(i,j,&k,&l);
+    cout<<"k= "<<k<<endl;
+    cout<<"l= "<<l<<endl;
+    return 0;
+}
+
+int addsub(int a, int b, int *sum, int *diff){
+    *sum=a+b;
+    *diff=a-b;
+    return *sum;
+}
+
+int refD(){
+    int i=1, j=2, k=10,l=11;
+    addsubref(i,j,k,l);
+    cout<<"k= "<<k<<endl;
+    cout<<"l= "<<l<<endl;
+    return 0;
+}
+
+int addsubref(int a, int b, int &sum, int &diff){
+    sum=a+b;
+    diff=a-b;
+    return sum;
+}
