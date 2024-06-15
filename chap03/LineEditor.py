@@ -1,4 +1,4 @@
-from data_structure.chap3.ArrayListClass import ArrayList
+from ArrayListClass import ArrayList
 
 list=ArrayList()
 while True:
@@ -22,7 +22,7 @@ while True:
         print()
         
     elif command=='l':
-        filename='test.txt'
+        filename='chap03/test.txt'
         infile=open(filename,'r')
         lines =infile.readlines()
         for line in lines:
@@ -30,7 +30,7 @@ while True:
         infile.close()
         
     elif command=='s':
-        filename='test.txt'
+        filename='chap03/test.txt'
         outfile=open(filename,'w')
         len=list.size
         

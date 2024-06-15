@@ -26,7 +26,7 @@ if __name__=='__main__':
     print(s2,'-->',checkbracktets(s2))
     print(s3,'-->',checkbracktets(s3))
     
-    filename='cfile.txt'
+    filename='chap04/cfile.txt'
     inFile=open(filename,'r')
     str=inFile.read()
     inFile.close()

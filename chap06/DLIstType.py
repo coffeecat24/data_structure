@@ -87,11 +87,20 @@ class DListType:
             #화살표 생성, 위치 마지막
             q=self.rear
             if self.rear==None:
-            self.size-=1
+                self.size-=1
     
     #과제는 아니지만 각자 만들어 보세요
     def deletePos(self,pos):
-    
+        if self.size!=0:
+            if pos==self.size:
+                self.deleteRear()
+            elif pos==1:
+                self.deleteFront()
+            else:
+                p=self.front
+                for i in range(1,pos+1):
+                    p=p.next
+                p.next=
     def display(self):
         p=self.front
         while p!=None:
